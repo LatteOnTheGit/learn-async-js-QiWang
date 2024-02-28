@@ -20,7 +20,7 @@ function sum2DArray(arr) {
         console.log('returning from sum');
     });
 }
-
+// export { sum2DArray };
 // Example usage:
 const array2D = [
     [1, 2, 3],
@@ -29,7 +29,21 @@ const array2D = [
 ];
 
 const sumPromise1 = sum2DArray(array2D);
-console.log(sumPromise1);
+sumPromise1.then((result) => {
+    console.log('Sum of 2D array is: ', result);
+}
+).catch((error) => {
+    console.log('Error: ', error);
+}
+);
+// console.log(sumPromise1);
 
 const sumPromise2 = sum2DArray('array2D');
-console.log(sumPromise2);
+sumPromise2.then((result) => {
+    console.log('Sum of 2D array is: ', result);
+}
+).catch((error) => {
+    console.log('Error: ', error);
+}
+);
+// console.log(sumPromise2);
